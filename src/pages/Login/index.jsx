@@ -30,19 +30,52 @@ const Login = () => {
     };
     return (
         <>
-            <div className='flex flex-col items-center justify-center h-screen bg-gray-900'>
-                <h1 className='text-white font-semibold text-3xl mb-10 uppercase '>User Login </h1>
-                <form className='w-1/3 shadow-md bg-white p-10 rounded-lg' onSubmit={handleLogin} >
-                    <input type="email" value={email} placeholder='Email' className='w-full border p-2 mb-8 rounded' onChange={(e) => setEmail(e.target.value)} />
-                    <div className="relative mb-8 w-full">
-                        <input type={showPassword ? "text" : "password"} value={password} placeholder="Password" className="w-full border p-2 rounded pr-10" onChange={(e) => setPassword(e.target.value)} />
-                        <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-4 text-gray-500">
-                            {showPassword ? <Eye size={12} /> : <EyeOff size={12} />}
+            <div className="min-h-screen flex items-center justify-center bg-gray-900 px-4">
+
+                <div className="w-full max-w-md bg-white p-6 md:p-10 rounded-lg shadow-md">
+
+                    <h1 className="text-xl md:text-2xl font-semibold text-center mb-5 uppercase">User Login</h1>
+
+                    <form onSubmit={handleLogin} className="space-y-6">
+
+                        <input
+                            type="email"
+                            value={email}
+                            placeholder="Email"
+                            className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+
+                        <div className="relative w-full">
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                value={password}
+                                placeholder="Password"
+                                className="w-full border border-gray-300 p-3 rounded pr-10 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
+
+                            <button
+                                type="button"
+                                onClick={() => setShowPassword(!showPassword)}
+                                className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
+                            >
+                                {showPassword ? <Eye size={16} /> : <EyeOff size={16} />}
+                            </button>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700 transition"
+                        >
+                            {loading ? "Logging in..." : "Login"}
                         </button>
-                    </div>
-                    <button type="submit" className="w-full bg-blue-600 text-white p-2 rounded"> {loading ? "Logging in..." : "Login"}</button>
-                </form>
+
+                    </form>
+
+                </div>
             </div>
+
 
         </>
     )

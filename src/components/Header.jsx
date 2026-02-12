@@ -3,7 +3,6 @@ import { Menu } from "lucide-react";
 import { AuthContext } from '../context/AuthContext'
 
 const Header = ({ toggleSidebar }) => {
-
   const { user } = useContext(AuthContext);
 
 
@@ -24,7 +23,6 @@ const Header = ({ toggleSidebar }) => {
           <span className="text-sm font-medium">
             {user?.email}
           </span>
-
         </div>
       </div>
 

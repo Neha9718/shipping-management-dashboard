@@ -28,15 +28,15 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
           <button onClick={toggleSidebar} className="md:hidden block"><X size={20} /></button>
         </div>
         <nav className="flex-1 p-4 space-y-2">
-          <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 rounded-lg transition-colors">
+          <a href="/dashboard" className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 rounded-lg transition-colors">
             <Home className="w-5 h-5" />
             Dashboard
           </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 rounded-lg transition-colors">
+          <a href="/dashboard/orders" className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 rounded-lg transition-colors">
             <Package className="w-5 h-5" />
             Orders
           </a>
-          <a href="#" className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 rounded-lg transition-colors">
+          <a href="/dashboard/settings" className="flex items-center gap-3 px-4 py-2 text-gray-100 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 rounded-lg transition-colors">
             <Settings className="w-5 h-5" />
             Settings
           </a>

@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
+import { Outlet } from "react-router-dom";
 import Header from '../../components/Header'
 import Sidebar from '../../components/Sidebar'
-import StatsCard from '../../components/StatsCard'
-import OrderTable from '../../components/OrderTable'
+
 
 const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,8 +18,7 @@ const Dashboard = () => {
         <div className='flex-1 flex flex-col overflow-hidden'>
           <Header toggleSidebar={() => setIsOpen(!isOpen)} />
           <main className='p-6 space-y-6  overflow-y-auto'>
-            <StatsCard />
-            <OrderTable />
+            <Outlet />
           </main>
         </div>
       </div>
